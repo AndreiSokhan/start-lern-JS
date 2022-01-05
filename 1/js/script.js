@@ -1,9 +1,7 @@
 "use strict";
 
 
-
-//004-006
-
+//004-006 (переменные и строгий режим; классификация типов данных в JS)
 
 //let number = 5.6;
 
@@ -31,7 +29,9 @@
 //let arr = ['plum.png', 'orange.jpeg', 6, 'apple.bmp', {}]
 //console.log(arr[4]);
 
-//007
+
+
+//007 (Простое общение с пользователем (окна в браузере))
 
 //alert('Hello');
 
@@ -51,7 +51,7 @@
 //console.log(typeof(null));
 
 
-//008
+//008 (Интерполяция)
 
 //const category = 'toys';
 
@@ -62,3 +62,45 @@
 //const user = 'Andrey';
 
 //alert(`Привет, ${user}`);
+
+
+//009 (Операторы в JS)
+
+console.log('arr' + " - object");
+console.log(4 + " - object");
+
+// инкремент (увеличение на 1)
+// декремент (уменьшение на 1)
+let incr = 10,
+    decr = 10;
+
+//++incr;
+//--decr;
+
+console.log(++incr);
+console.log(--decr);
+
+//знак "%" выводит в консоль остаток от деления 
+console.log(5%2);
+
+// один знак "=" - это оператор присвоения
+// два знака "==" - это сравнение (не строгое равенство)
+// три знака "===" - это сравнение (строгое равенство) при сравнении учитывает еще и тип данных
+console.log(2*4 == '8');
+
+// операторы "и" (&&) и "или" ( || )
+
+const isChecked = false,
+      isClose = false;
+
+//console.log(isChecked && isClose);
+console.log(isChecked || isClose);
+
+//оператор отрицание "!" - обращает значение в обратное
+console.log(isChecked || !isClose);
+
+//порядок выполнения операторов 
+console.log(2 + 2 * 2 === 8);
+console.log(2 + 2 * 2 != '6');
+
+//010 011 ситема контроля версий Git Hub
