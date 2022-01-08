@@ -28,10 +28,10 @@ const num = 40;
 
 
 
-const number = 50
+const number = 50;
 
-// В классическом JS "swich" всегда идет на строгое соответствие
-swich (number) {
+// В классическом JS "switch" всегда идет на строгое соответствие
+switch (number) {
    case 49:
       console.log('Неверно');
       break;
