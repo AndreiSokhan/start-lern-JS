@@ -1,5 +1,7 @@
 'use strict';
 
+//условия 
+
 if (4) {
    console.log("ok!");
 } else {
