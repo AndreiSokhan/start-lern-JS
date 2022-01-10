@@ -24,9 +24,9 @@ if (num < 49) {
 // пример "4 + 4" - использует бинарный оператор 
 // пример " + '4' " - использует унарный оператор (унарный "+" )
 
-const num = 40;
+const nu = 40;
 
-(num === 40) ? console.log("Ok!") : console.log("Error!");
+(nu === 40) ? console.log("Ok!") : console.log("Error!");
 
 
 

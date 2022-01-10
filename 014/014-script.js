@@ -13,21 +13,21 @@ while  (num <= 55) {
 
 // 2 вил цикла "do ... while" сначало что-то делаем. а топом проверяем условие, и если необходимо, то мы можем выйти из цикла
 
-let num = 50;
+let number = 50;
 
 do {
-   console.log(num);
-   num++;
+   console.log(number);
+   number++;
 }
-while (num < 55);
+while (number < 55);
 
-//третий вид - цикл "for"
+//третий вид - цикл "for" он повторяет действие до тех пор пока не произойдет какое-то специальное событие завершающие цикл
 
-let num = 50;
+let nu = 50;
 
 for (let i = 1; i < 8; i++) {
-   console.log(num);
-   num++;
+   console.log(nu);
+   nu++;
 }
 
 
