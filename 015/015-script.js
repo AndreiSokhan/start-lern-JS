@@ -24,7 +24,6 @@ const personalMovieDB = {
     privat: false
 };
 
-
 //задаем вопросы в ручном режиме
 
 //const a = prompt('Один из последних просмотренных фильмов?', ''),
@@ -34,7 +33,6 @@ const personalMovieDB = {
 
 //personalMovieDB.movies[a] = b;
 //personalMovieDB.movies[c] = d;
-
 
 //задаем вопросы с использование цикла for
 
