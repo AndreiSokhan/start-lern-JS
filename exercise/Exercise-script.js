@@ -85,15 +85,27 @@ const personalMovieDB = {
    },
 
    writeYourGenres: function() {
-      for (let i = 1; i <= 3; i++) {
-         let genre = prompt(`Ваш любимый жанр под номером ${i}`);
+      //for (let i = 1; i <= 3; i++) {
+      //   let genre = prompt(`Ваш любимый жанр под номером ${i}`);
 
-         if (genre === '' || genre == null) {
-            console.log('Вы ввели не корректные данные или не вввели и вообще');
-            i--;
-         } else {
-            personalMovieDB.genres[i - 1] = genre;
-         }
+      //   if (genre === '' || genre == null) {
+      //      console.log('Вы ввели не корректные данные или не вввели и вообще');
+      //      i--;
+      //   } else {
+      //      personalMovieDB.genres[i - 1] = genre;
+      //   }
+      //}
+
+      //также данную задачу можно реализовать иным способом
+      for (let i = 1; i < 2; i++) {
+      let genres = prompt(`Введите Ваши любимые жанры через заптую`);
+
+      if (genres === '' || genres == null) {
+         console.log('Вы ввели не корректные данные или не вввели и вообще');
+         i--;
+      } else {
+         personalMovieDB.genres = genres.split(', ');
+         personalMovieDB.genres.sort();
       }
 
       personalMovieDB.genres.forEach((item, i) => {
