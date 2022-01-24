@@ -35,7 +35,7 @@ const personalMovieDB = {
    actors: {},
    genres: [],
    privat: false,
-   start: function() {
+   start: function () {
       personalMovieDB.count = +prompt('Сколько фильмов вы посмотрели?', '');
 
       while (personalMovieDB.count == '' || numberOfFilms == null || isNaN(personalMovieDB.count)) {
@@ -43,11 +43,11 @@ const personalMovieDB = {
       }
    },
 
-   rememberMeFilms: function() {
+   rememberMeFilms: function () {
       for (let i = 0; i < 2; i++) {
          const a = prompt('Один из последних просмотренных фильмов?', ''),
-               b = prompt('На сколько оцените его?', '');
-         
+            b = prompt('На сколько оцените его?', '');
+
          if (a != null && b != null && a != '' && b != '' && a.length < 20) {
             personalMovieDB.movies[a] = b;
             console.log('done');
@@ -58,7 +58,7 @@ const personalMovieDB = {
       }
    },
 
-   detectPersonalLevel: function() {
+   detectPersonalLevel: function () {
       if (personalMovieDB.count <= 10) {
          console.log("Просмотрено довольно мало фильмов");
       } else if (personalMovieDB.count > 10 && personalMovieDB.count <= 30) {
@@ -70,13 +70,13 @@ const personalMovieDB = {
       }
    },
 
-   showMyDB: function(hidden) {
+   showMyDB: function (hidden) {
       if (!hidden) {
          console.log(personalMovieDB);
       }
    },
 
-   toggleVisibleMyDB: function() {
+   toggleVisibleMyDB: function () {
       if (personalMovieDB.privat) {
          personalMovieDB.privat = false;
       } else {
@@ -84,7 +84,7 @@ const personalMovieDB = {
       }
    },
 
-   writeYourGenres: function() {
+   writeYourGenres: function () {
       //for (let i = 1; i <= 3; i++) {
       //   let genre = prompt(`Ваш любимый жанр под номером ${i}`);
 
@@ -98,18 +98,19 @@ const personalMovieDB = {
 
       //также данную задачу можно реализовать иным способом
       for (let i = 1; i < 2; i++) {
-      let genres = prompt(`Введите Ваши любимые жанры через заптую`);
+         let genres = prompt(`Введите Ваши любимые жанры через заптую`).toLowerCase();
 
-      if (genres === '' || genres == null) {
-         console.log('Вы ввели не корректные данные или не вввели и вообще');
-         i--;
-      } else {
-         personalMovieDB.genres = genres.split(', ');
-         personalMovieDB.genres.sort();
+         if (genres === '' || genres == null) {
+            console.log('Вы ввели не корректные данные или не вввели и вообще');
+            i--;
+         } else {
+            personalMovieDB.genres = genres.split(', ');
+            personalMovieDB.genres.sort();
+         }
+
+         personalMovieDB.genres.forEach((item, i) => {
+            console.log(`Любимый жанр ${i + 1} - это ${item}`);
+         });
       }
-
-      personalMovieDB.genres.forEach((item, i) => {
-         console.log(`Любимый жанр ${i + 1} - это ${item}`);
-      });
    }
 };
