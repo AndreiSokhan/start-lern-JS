@@ -37,3 +37,34 @@ console.log(typeof(parseInt("15px", 10)));
 let answ = +prompt("Hello", "");
 
 //любый данные, которые мы получаем на сайте от пользователя являются строками "string"
+
+//to boolean
+
+// всегда будет false:
+// null;
+// 0
+// '' (пустая строка)
+// undefined (что-то без значения)
+// NaN (специальное значение числового типа)
+//все лостальное в логическом смысле будет true
+
+// 1
+//разделение на логические типы
+
+let switcher = null;
+
+if (switcher) {
+   console.log('Working ...');
+}
+
+switcher = 1;
+if (switcher) {
+   console.log('Working ...');
+}
+
+// 2
+console.log(typeof(Boolean('4')));
+
+//3 (два знака отрицания и строка (!! "") превращается в boolean выражение)
+console.log(typeof(!!"45454545"));
+
