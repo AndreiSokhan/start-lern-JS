@@ -46,7 +46,7 @@ const box = document.getElementById('box'),
       circles = document.getElementsByClassName('circle'),
       hearts = document.querySelectorAll('.heart'),
       oneHeart = document.querySelector('.heart'),
-      wrapper = document.querySelector('wrapper');
+      wrapper = document.querySelector('.wrapper');
 
 //будем изменять стили элементов
 
@@ -81,6 +81,39 @@ const div = document.createElement('div');
 div.classList.add('black');
 
 //document.body.append(div);
+
+//вставляет элемент в конец родителя
 //wrapper.append(div);
 
-wrapper.prepend(div);
+//вставляет элемент в начале родителя
+//wrapper.prepend(div);
+
+//вставляет элемент перед каким-то элементом
+//hearts[0].before(div);
+
+//вставляет элемент после какого-то элементом
+//hearts[2].after(div);
+
+//удаляем элементы со страницы
+//circles[0].remove();
+
+//замена одного элемента другим
+//hearts[0].replaceWith(circles[0]);
+
+
+//устаревшие конструкции
+
+//вставить перед
+//wrapper.appendChild(div);
+
+//вставить перед
+//wrapper.insertBefore(div, hearts[1]);
+
+//удаление элемента
+//wrapper.removeChild(hearts[1]);
+
+//замена элемента
+//wrapper.replaceChild(circles[0], hearts[0]);
+
+
+
