@@ -44,9 +44,9 @@
 const box = document.getElementById('box'),
       btns = document.getElementsByTagName('button'),
       circles = document.getElementsByClassName('circle'),
-      hearts = document.querySelectorAll('.heart'),
-      oneHeart = document.querySelector('.heart'),
-      wrapper = document.querySelector('.wrapper');
+      wrapper = document.querySelector('.wrapper'),
+      hearts = wrapper.querySelectorAll('.heart'),
+      oneHeart = wrapper.querySelector('.heart');      
 
 //будем изменять стили элементов
 
@@ -83,7 +83,7 @@ div.classList.add('black');
 //document.body.append(div);
 
 //вставляет элемент в конец родителя
-//wrapper.append(div);
+wrapper.append(div);
 
 //вставляет элемент в начале родителя
 //wrapper.prepend(div);
@@ -98,7 +98,7 @@ div.classList.add('black');
 //circles[0].remove();
 
 //замена одного элемента другим
-//hearts[0].replaceWith(circles[0]);
+hearts[0].replaceWith(circles[0]);
 
 
 //устаревшие конструкции
@@ -117,3 +117,10 @@ div.classList.add('black');
 
 
 
+// вписать текст в добавленный элемент
+div.innerHTML = "<h3>Hello world</h3>";
+
+//второй вариант
+//div.textContent = "Hello";
+
+div.insertAdjacentHTML('afterend', '<h2>Hello</h2>');
