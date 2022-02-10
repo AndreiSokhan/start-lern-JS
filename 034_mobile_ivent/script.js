@@ -8,7 +8,7 @@
 //6 touchcancel (когда точка прикосновения больше не регистрируется на поверхности)
 
 
-window.addEventListener('DOMContentloaded', => {
+window.addEventListener('DOMContentloaded', () => {
     const box = document.querySelector('.box');
 
     box.addEventListener('touchstart', () => {

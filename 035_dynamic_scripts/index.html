@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+
+</head>
+<body>
+
+   <!-- атрибут defer сообщает браузеру, чтобы онн прдолжал загружать страницу (html разметку) а script будет выполняться в фоновом режиме. Defer никогда не блокирует загрузку страницы. Scripts с атрибутами defer всегда выполняются когда DOM-дерево уже готово. Код с атрибутами defer всегда будут загружаться поочередно-->
+   <!--<script defer src='./scripts/script.js'></script>
+   <script defer src='./scripts/test.js'></script>-->
+
+   <!-- async При использовании async страница не ждет асинхронных скриптов. Страница просто обрабатывается и тотбражается. 2. Событие DOMContentLoaded и асинхронные скрипты не ждут друг другаю. Скрипт начинает загружаться в фоновом режиме, как только до него доходит страница, но при этом запускается как только он был загружен. Он никого не ждет (другие скрипты).-->
+
+   <script async src='./scripts/script.js'></script>
+   <!--<script async src='./scripts/test.js'></script>-->
+   <p>Hello world!</p>
+   <p>Second message</p>
+
+
+</body>
+</html>
